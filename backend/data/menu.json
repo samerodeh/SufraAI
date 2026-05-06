@@ -1,0 +1,1389 @@
+[
+  {
+    "id": "mana-zaatar-001",
+    "name_en": "Zaatar Mana'eesh",
+    "name_ar": "معجنات زعتر",
+    "category": "manaeesh",
+    "meal_period": "breakfast",
+    "description_en": "Flatbread topped with zaatar and olive oil, baked fresh to order.",
+    "description_ar": "خبز مرقوق مع زعتر وزيت زيتون، يُخبز طازجاً.",
+    "ingredients": [
+      "dough",
+      "zaatar",
+      "olive oil"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "diet_tags": [
+      "vegan",
+      "halal"
+    ],
+    "variants": [
+      "small",
+      "large"
+    ],
+    "modifications": {
+      "toppings": [
+        "cheese",
+        "egg"
+      ],
+      "spice_level": [
+        "mild",
+        "medium"
+      ]
+    },
+    "price": 4.5,
+    "image_url": "https://placehold.co/400x300?text=Zaatar+Manaeesh",
+    "available": true
+  },
+  {
+    "id": "mana-cheese-002",
+    "name_en": "Cheese Mana'eesh",
+    "name_ar": "معجنات جبنة",
+    "category": "manaeesh",
+    "meal_period": "breakfast",
+    "description_en": "Flatbread loaded with stretchy Akkawi cheese, baked until golden.",
+    "description_ar": "معجنات بجبنة عكاوي ممتدة، تُخبز حتى تذهب.",
+    "ingredients": [
+      "dough",
+      "akkawi cheese",
+      "olive oil"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "halal"
+    ],
+    "variants": [
+      "small",
+      "large"
+    ],
+    "modifications": {
+      "toppings": [
+        "zaatar",
+        "tomato",
+        "mint"
+      ]
+    },
+    "price": 5,
+    "image_url": "https://placehold.co/400x300?text=Cheese+Manaeesh",
+    "available": true
+  },
+  {
+    "id": "mana-mixed-003",
+    "name_en": "Mixed Mana'eesh",
+    "name_ar": "معجنات مشكلة",
+    "category": "manaeesh",
+    "meal_period": "breakfast",
+    "description_en": "Half zaatar, half cheese — the best of both worlds.",
+    "description_ar": "نصف زعتر ونصف جبنة — الأفضل من العالمين.",
+    "ingredients": [
+      "dough",
+      "zaatar",
+      "akkawi cheese",
+      "olive oil"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "halal"
+    ],
+    "variants": [
+      "small",
+      "large"
+    ],
+    "modifications": {
+      "toppings": [
+        "egg",
+        "tomato"
+      ]
+    },
+    "price": 5.5,
+    "image_url": "https://placehold.co/400x300?text=Mixed+Manaeesh",
+    "available": true
+  },
+  {
+    "id": "mana-lahm-004",
+    "name_en": "Lahm Bi Ajeen",
+    "name_ar": "لحم بعجين",
+    "category": "manaeesh",
+    "meal_period": "breakfast",
+    "description_en": "Thin flatbread topped with spiced minced lamb and tomato.",
+    "description_ar": "عجينة رفيعة مع لحم غنم مفروم متبل وطماطم.",
+    "ingredients": [
+      "dough",
+      "minced lamb",
+      "tomato",
+      "onion",
+      "spices"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "diet_tags": [
+      "halal"
+    ],
+    "variants": [
+      "small",
+      "large"
+    ],
+    "modifications": {
+      "spice_level": [
+        "mild",
+        "medium",
+        "hot"
+      ],
+      "toppings": [
+        "yogurt",
+        "lemon"
+      ]
+    },
+    "price": 6.5,
+    "image_url": "https://placehold.co/400x300?text=Lahm+Bi+Ajeen",
+    "available": true
+  },
+  {
+    "id": "mana-kishek-005",
+    "name_en": "Kishek Mana'eesh",
+    "name_ar": "معجنات كشك",
+    "category": "manaeesh",
+    "meal_period": "breakfast",
+    "description_en": "Traditional flatbread with kishek (dried yogurt and bulgur) paste, topped with tomato and onion.",
+    "description_ar": "معجنات تقليدية بالكشك مع طماطم وبصل.",
+    "ingredients": [
+      "dough",
+      "kishek",
+      "tomato",
+      "onion",
+      "olive oil"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "halal"
+    ],
+    "variants": [
+      "small",
+      "large"
+    ],
+    "modifications": {
+      "toppings": [
+        "olives",
+        "chili flakes"
+      ]
+    },
+    "price": 5.5,
+    "image_url": "https://placehold.co/400x300?text=Kishek+Manaeesh",
+    "available": true
+  },
+  {
+    "id": "sand-falafel-006",
+    "name_en": "Falafel Sandwich",
+    "name_ar": "ساندويش فلافل",
+    "category": "sandwiches",
+    "meal_period": "all-day",
+    "description_en": "Crispy falafel in pita with fresh veggies and tahini sauce.",
+    "description_ar": "فلافل مقرمشة في خبز عربي مع خضار طازجة وطحينة.",
+    "ingredients": [
+      "falafel",
+      "pita",
+      "tomato",
+      "parsley",
+      "tahini",
+      "pickles"
+    ],
+    "allergens": [
+      "gluten",
+      "sesame"
+    ],
+    "diet_tags": [
+      "vegan",
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {
+      "sauces": [
+        "tahini",
+        "garlic sauce",
+        "hot sauce"
+      ],
+      "toppings": [
+        "extra pickles",
+        "french fries"
+      ]
+    },
+    "price": 6,
+    "image_url": "https://placehold.co/400x300?text=Falafel+Sandwich",
+    "available": true
+  },
+  {
+    "id": "sand-shawchicken-007",
+    "name_en": "Chicken Shawarma Sandwich",
+    "name_ar": "ساندويش شاورما دجاج",
+    "category": "sandwiches",
+    "meal_period": "all-day",
+    "description_en": "Marinated chicken shawarma wrapped in fresh pita with garlic sauce, pickles and fries.",
+    "description_ar": "شاورما دجاج متبلة ملفوفة بخبز عربي مع توم ومخلل وبطاطا.",
+    "ingredients": [
+      "chicken",
+      "pita",
+      "garlic sauce",
+      "pickles",
+      "tomato",
+      "fries"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "diet_tags": [
+      "halal"
+    ],
+    "variants": [
+      "wrap",
+      "sandwich"
+    ],
+    "modifications": {
+      "sauces": [
+        "garlic sauce",
+        "tahini",
+        "hot sauce"
+      ],
+      "toppings": [
+        "extra pickles",
+        "jalapenos"
+      ]
+    },
+    "price": 8.5,
+    "image_url": "https://placehold.co/400x300?text=Chicken+Shawarma",
+    "available": true
+  },
+  {
+    "id": "sand-shawbeef-008",
+    "name_en": "Beef Shawarma Sandwich",
+    "name_ar": "ساندويش شاورما لحم",
+    "category": "sandwiches",
+    "meal_period": "all-day",
+    "description_en": "Seasoned beef shawarma with tahini, parsley, and sumac onions in pita.",
+    "description_ar": "شاورما لحم بالطحينة والبقدونس وبصل سماق في خبز عربي.",
+    "ingredients": [
+      "beef",
+      "pita",
+      "tahini",
+      "parsley",
+      "sumac onions",
+      "tomato"
+    ],
+    "allergens": [
+      "gluten",
+      "sesame"
+    ],
+    "diet_tags": [
+      "halal"
+    ],
+    "variants": [
+      "wrap",
+      "sandwich"
+    ],
+    "modifications": {
+      "sauces": [
+        "tahini",
+        "hot sauce",
+        "garlic sauce"
+      ],
+      "toppings": [
+        "extra sumac onions",
+        "fries"
+      ]
+    },
+    "price": 9,
+    "image_url": "https://placehold.co/400x300?text=Beef+Shawarma",
+    "available": true
+  },
+  {
+    "id": "sand-kafta-009",
+    "name_en": "Kafta Sandwich",
+    "name_ar": "ساندويش كفتة",
+    "category": "sandwiches",
+    "meal_period": "all-day",
+    "description_en": "Grilled spiced beef and lamb kafta in pita with tomato, onion and tahini.",
+    "description_ar": "كفتة لحم مشوية في خبز عربي مع طماطم وبصل وطحينة.",
+    "ingredients": [
+      "beef",
+      "lamb",
+      "pita",
+      "parsley",
+      "onion",
+      "spices",
+      "tahini"
+    ],
+    "allergens": [
+      "gluten",
+      "sesame"
+    ],
+    "diet_tags": [
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {
+      "sauces": [
+        "tahini",
+        "hot sauce"
+      ],
+      "toppings": [
+        "grilled peppers",
+        "pickles"
+      ]
+    },
+    "price": 9,
+    "image_url": "https://placehold.co/400x300?text=Kafta+Sandwich",
+    "available": true
+  },
+  {
+    "id": "sand-halloumi-010",
+    "name_en": "Halloumi Sandwich",
+    "name_ar": "ساندويش حلومي",
+    "category": "sandwiches",
+    "meal_period": "all-day",
+    "description_en": "Grilled halloumi cheese with roasted peppers, mint and olive oil in pita.",
+    "description_ar": "جبن حلومي مشوي مع فلفل محمر ونعناع وزيت زيتون في خبز عربي.",
+    "ingredients": [
+      "halloumi",
+      "pita",
+      "roasted peppers",
+      "mint",
+      "olive oil",
+      "tomato"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {
+      "toppings": [
+        "avocado",
+        "zaatar",
+        "hot sauce"
+      ]
+    },
+    "price": 8,
+    "image_url": "https://placehold.co/400x300?text=Halloumi+Sandwich",
+    "available": true
+  },
+  {
+    "id": "plate-mixgrill-011",
+    "name_en": "Mixed Grill Plate",
+    "name_ar": "طبق مشاوي مشكلة",
+    "category": "plates",
+    "meal_period": "lunch",
+    "description_en": "A generous platter of kafta, shish tawook, and lamb chops served with rice, grilled veggies and salad.",
+    "description_ar": "طبق سخي من الكفتة والشيش طاووق وضلوع الغنم مع أرز وخضار مشوية وسلطة.",
+    "ingredients": [
+      "kafta",
+      "chicken",
+      "lamb chops",
+      "rice",
+      "grilled vegetables",
+      "salad"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "diet_tags": [
+      "halal"
+    ],
+    "variants": [
+      "single",
+      "sharing"
+    ],
+    "modifications": {
+      "sides": [
+        "extra rice",
+        "fries",
+        "extra salad"
+      ],
+      "spice_level": [
+        "mild",
+        "medium",
+        "hot"
+      ]
+    },
+    "price": 22,
+    "image_url": "https://placehold.co/400x300?text=Mixed+Grill+Plate",
+    "available": true
+  },
+  {
+    "id": "plate-shawchicken-012",
+    "name_en": "Chicken Shawarma Plate",
+    "name_ar": "طبق شاورما دجاج",
+    "category": "plates",
+    "meal_period": "lunch",
+    "description_en": "Sliced chicken shawarma over rice with garlic sauce, pickles and fattoush salad.",
+    "description_ar": "شاورما دجاج مقطعة على الأرز مع التوم والمخلل وسلطة الفتوش.",
+    "ingredients": [
+      "chicken shawarma",
+      "rice",
+      "garlic sauce",
+      "pickles",
+      "fattoush"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "diet_tags": [
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {
+      "sides": [
+        "fries",
+        "extra salad",
+        "extra garlic sauce"
+      ]
+    },
+    "price": 15,
+    "image_url": "https://placehold.co/400x300?text=Shawarma+Chicken+Plate",
+    "available": true
+  },
+  {
+    "id": "plate-falafel-013",
+    "name_en": "Falafel Plate",
+    "name_ar": "طبق فلافل",
+    "category": "plates",
+    "meal_period": "all-day",
+    "description_en": "Six crispy falafel balls with hummus, tabbouleh, pita and pickles.",
+    "description_ar": "ست حبات فلافل مقرمشة مع حمص وتبولة وخبز عربي ومخلل.",
+    "ingredients": [
+      "falafel",
+      "hummus",
+      "tabbouleh",
+      "pita",
+      "pickles",
+      "tahini"
+    ],
+    "allergens": [
+      "gluten",
+      "sesame"
+    ],
+    "diet_tags": [
+      "vegan",
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {
+      "sides": [
+        "extra hummus",
+        "extra pita",
+        "fattoush"
+      ]
+    },
+    "price": 13,
+    "image_url": "https://placehold.co/400x300?text=Falafel+Plate",
+    "available": true
+  },
+  {
+    "id": "plate-mezze-014",
+    "name_en": "Mezze Platter",
+    "name_ar": "طبق مزة مشكلة",
+    "category": "plates",
+    "meal_period": "all-day",
+    "description_en": "A sharing platter with hummus, baba ghanoush, labneh, falafel, olives, and fresh pita.",
+    "description_ar": "طبق مشاركة بالحمص وبابا غنوج واللبنة والفلافل والزيتون والخبز العربي.",
+    "ingredients": [
+      "hummus",
+      "baba ghanoush",
+      "labneh",
+      "falafel",
+      "olives",
+      "pita",
+      "zaatar"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "sesame"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "halal"
+    ],
+    "variants": [
+      "small (2 pax)",
+      "large (4 pax)"
+    ],
+    "modifications": {
+      "add_ons": [
+        "muhammara",
+        "makdous",
+        "extra falafel"
+      ]
+    },
+    "price": 18,
+    "image_url": "https://placehold.co/400x300?text=Mezze+Platter",
+    "available": true
+  },
+  {
+    "id": "mezze-hummus-015",
+    "name_en": "Hummus",
+    "name_ar": "حمص",
+    "category": "mezze",
+    "meal_period": "all-day",
+    "description_en": "Classic creamy hummus drizzled with olive oil and paprika, served with pita.",
+    "description_ar": "حمص كريمي كلاسيكي مع زيت زيتون وبابريكا، يُقدم مع خبز عربي.",
+    "ingredients": [
+      "chickpeas",
+      "tahini",
+      "lemon",
+      "garlic",
+      "olive oil",
+      "paprika"
+    ],
+    "allergens": [
+      "sesame",
+      "gluten"
+    ],
+    "diet_tags": [
+      "vegan",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [
+      "regular",
+      "with meat",
+      "with mushrooms"
+    ],
+    "modifications": {},
+    "price": 7,
+    "image_url": "https://placehold.co/400x300?text=Hummus",
+    "available": true
+  },
+  {
+    "id": "mezze-baba-016",
+    "name_en": "Baba Ghanoush",
+    "name_ar": "بابا غنوج",
+    "category": "mezze",
+    "meal_period": "all-day",
+    "description_en": "Smoky fire-roasted eggplant dip with tahini, lemon and garlic.",
+    "description_ar": "متبل باذنجان مشوي على النار مع طحينة وليمون وثوم.",
+    "ingredients": [
+      "eggplant",
+      "tahini",
+      "lemon",
+      "garlic",
+      "olive oil",
+      "parsley"
+    ],
+    "allergens": [
+      "sesame"
+    ],
+    "diet_tags": [
+      "vegan",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {},
+    "price": 7.5,
+    "image_url": "https://placehold.co/400x300?text=Baba+Ghanoush",
+    "available": true
+  },
+  {
+    "id": "mezze-muhammara-017",
+    "name_en": "Muhammara",
+    "name_ar": "محمرة",
+    "category": "mezze",
+    "meal_period": "all-day",
+    "description_en": "Spicy roasted red pepper and walnut dip with pomegranate molasses.",
+    "description_ar": "متبل فلفل أحمر مشوي وجوز مع دبس الرمان.",
+    "ingredients": [
+      "red pepper",
+      "walnuts",
+      "breadcrumbs",
+      "pomegranate molasses",
+      "cumin",
+      "olive oil"
+    ],
+    "allergens": [
+      "gluten",
+      "tree nuts"
+    ],
+    "diet_tags": [
+      "vegan",
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {
+      "spice_level": [
+        "medium",
+        "hot"
+      ]
+    },
+    "price": 7.5,
+    "image_url": "https://placehold.co/400x300?text=Muhammara",
+    "available": true
+  },
+  {
+    "id": "mezze-labneh-018",
+    "name_en": "Labneh",
+    "name_ar": "لبنة",
+    "category": "mezze",
+    "meal_period": "all-day",
+    "description_en": "Strained yogurt cheese drizzled with olive oil, zaatar and fresh mint.",
+    "description_ar": "جبنة لبنة مصفاة مع زيت زيتون وزعتر ونعناع طازج.",
+    "ingredients": [
+      "labneh",
+      "olive oil",
+      "zaatar",
+      "mint",
+      "tomato"
+    ],
+    "allergens": [
+      "dairy"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {
+      "toppings": [
+        "olives",
+        "chili flakes",
+        "cucumber"
+      ]
+    },
+    "price": 6.5,
+    "image_url": "https://placehold.co/400x300?text=Labneh",
+    "available": true
+  },
+  {
+    "id": "mezze-foul-019",
+    "name_en": "Foul Mdammas",
+    "name_ar": "فول مدمس",
+    "category": "mezze",
+    "meal_period": "breakfast",
+    "description_en": "Slow-cooked fava beans with olive oil, lemon, garlic and cumin, served with pita.",
+    "description_ar": "فول مطهو ببطء مع زيت زيتون وليمون وثوم وكمون، يُقدم مع خبز عربي.",
+    "ingredients": [
+      "fava beans",
+      "olive oil",
+      "lemon",
+      "garlic",
+      "cumin",
+      "parsley"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "diet_tags": [
+      "vegan",
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {
+      "toppings": [
+        "diced tomato",
+        "fresh chili",
+        "extra olive oil"
+      ]
+    },
+    "price": 6,
+    "image_url": "https://placehold.co/400x300?text=Foul+Mdammas",
+    "available": true
+  },
+  {
+    "id": "mezze-makdous-020",
+    "name_en": "Makdous",
+    "name_ar": "مكدوس",
+    "category": "mezze",
+    "meal_period": "all-day",
+    "description_en": "Oil-cured baby eggplants stuffed with walnuts, red pepper and garlic.",
+    "description_ar": "باذنجان صغير مكبوس بالزيت محشو بالجوز والفلفل الأحمر والثوم.",
+    "ingredients": [
+      "baby eggplant",
+      "walnuts",
+      "red pepper",
+      "garlic",
+      "olive oil"
+    ],
+    "allergens": [
+      "tree nuts"
+    ],
+    "diet_tags": [
+      "vegan",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {},
+    "price": 7,
+    "image_url": "https://placehold.co/400x300?text=Makdous",
+    "available": true
+  },
+  {
+    "id": "salad-fattoush-021",
+    "name_en": "Fattoush Salad",
+    "name_ar": "سلطة فتوش",
+    "category": "salads",
+    "meal_period": "all-day",
+    "description_en": "Fresh chopped vegetables with crispy pita chips, sumac and pomegranate dressing.",
+    "description_ar": "خضار طازجة مقطعة مع قطع خبز مقلي وسماق ودبس رمان.",
+    "ingredients": [
+      "romaine",
+      "tomato",
+      "cucumber",
+      "radish",
+      "mint",
+      "pita chips",
+      "sumac",
+      "pomegranate molasses"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "diet_tags": [
+      "vegan",
+      "halal"
+    ],
+    "variants": [
+      "small",
+      "large"
+    ],
+    "modifications": {
+      "add_ons": [
+        "halloumi",
+        "falafel",
+        "chicken"
+      ]
+    },
+    "price": 9,
+    "image_url": "https://placehold.co/400x300?text=Fattoush+Salad",
+    "available": true
+  },
+  {
+    "id": "salad-tabbouleh-022",
+    "name_en": "Tabbouleh",
+    "name_ar": "تبولة",
+    "category": "salads",
+    "meal_period": "all-day",
+    "description_en": "Finely chopped parsley, mint, tomato, and bulgur with lemon and olive oil.",
+    "description_ar": "بقدونس ونعناع وطماطم وبرغل مفروم ناعماً مع ليمون وزيت زيتون.",
+    "ingredients": [
+      "parsley",
+      "mint",
+      "tomato",
+      "bulgur",
+      "lemon",
+      "olive oil"
+    ],
+    "allergens": [
+      "gluten"
+    ],
+    "diet_tags": [
+      "vegan",
+      "halal"
+    ],
+    "variants": [
+      "small",
+      "large"
+    ],
+    "modifications": {},
+    "price": 8,
+    "image_url": "https://placehold.co/400x300?text=Tabbouleh",
+    "available": true
+  },
+  {
+    "id": "sweet-baklava-023",
+    "name_en": "Baklava",
+    "name_ar": "بقلاوة",
+    "category": "sweets",
+    "meal_period": "all-day",
+    "description_en": "Layers of crispy phyllo, chopped pistachios and honey syrup.",
+    "description_ar": "طبقات من العجينة المقرمشة مع الفستق المفروم وشراب العسل.",
+    "ingredients": [
+      "phyllo dough",
+      "pistachios",
+      "butter",
+      "honey",
+      "rose water"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "tree nuts"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "halal"
+    ],
+    "variants": [
+      "piece",
+      "box of 6",
+      "box of 12"
+    ],
+    "modifications": {},
+    "price": 3.5,
+    "image_url": "https://placehold.co/400x300?text=Baklava",
+    "available": true
+  },
+  {
+    "id": "sweet-knafeh-024",
+    "name_en": "Knafeh",
+    "name_ar": "كنافة",
+    "category": "sweets",
+    "meal_period": "all-day",
+    "description_en": "Shredded wheat pastry filled with sweet Nabulsi cheese, soaked in orange blossom syrup.",
+    "description_ar": "كنافة بالجبن النابلسي مع شيرة ماء الزهر.",
+    "ingredients": [
+      "kataifi dough",
+      "nabulsi cheese",
+      "sugar syrup",
+      "orange blossom water",
+      "pistachios"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "tree nuts"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "halal"
+    ],
+    "variants": [
+      "slice",
+      "half tray",
+      "full tray"
+    ],
+    "modifications": {},
+    "price": 7,
+    "image_url": "https://placehold.co/400x300?text=Knafeh",
+    "available": true
+  },
+  {
+    "id": "sweet-maamoul-025",
+    "name_en": "Maamoul",
+    "name_ar": "معمول",
+    "category": "sweets",
+    "meal_period": "all-day",
+    "description_en": "Buttery semolina cookies stuffed with dates or walnuts.",
+    "description_ar": "كعك سميد بالزبدة محشو بالتمر أو الجوز.",
+    "ingredients": [
+      "semolina",
+      "butter",
+      "dates or walnuts",
+      "rose water",
+      "orange blossom water"
+    ],
+    "allergens": [
+      "gluten",
+      "dairy",
+      "tree nuts"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "halal"
+    ],
+    "variants": [
+      "date-filled",
+      "walnut-filled"
+    ],
+    "modifications": {},
+    "price": 2.5,
+    "image_url": "https://placehold.co/400x300?text=Maamoul",
+    "available": true
+  },
+  {
+    "id": "drink-jallab-026",
+    "name_en": "Jallab",
+    "name_ar": "جلاب",
+    "category": "drinks",
+    "meal_period": "all-day",
+    "description_en": "Refreshing grape and rose water drink topped with pine nuts and raisins.",
+    "description_ar": "مشروب عنب ومياه الورد المنعش مع الصنوبر والزبيب.",
+    "ingredients": [
+      "jallab syrup",
+      "rose water",
+      "water",
+      "ice",
+      "pine nuts",
+      "raisins"
+    ],
+    "allergens": [
+      "tree nuts"
+    ],
+    "diet_tags": [
+      "vegan",
+      "halal"
+    ],
+    "variants": [
+      "small",
+      "large"
+    ],
+    "modifications": {},
+    "price": 4.5,
+    "image_url": "https://placehold.co/400x300?text=Jallab",
+    "available": true
+  },
+  {
+    "id": "drink-mintlemonade-027",
+    "name_en": "Mint Lemonade",
+    "name_ar": "ليمون بالنعناع",
+    "category": "drinks",
+    "meal_period": "all-day",
+    "description_en": "Freshly squeezed lemon blended with fresh mint and a touch of sugar.",
+    "description_ar": "ليمون طازج مع نعناع طازج وقليل من السكر.",
+    "ingredients": [
+      "lemon",
+      "mint",
+      "sugar",
+      "water",
+      "ice"
+    ],
+    "allergens": [],
+    "diet_tags": [
+      "vegan",
+      "halal"
+    ],
+    "variants": [
+      "small",
+      "large"
+    ],
+    "modifications": {
+      "sweetness": [
+        "unsweetened",
+        "lightly sweet",
+        "sweet"
+      ]
+    },
+    "price": 4,
+    "image_url": "https://placehold.co/400x300?text=Mint+Lemonade",
+    "available": true
+  },
+  {
+    "id": "drink-ayran-028",
+    "name_en": "Ayran",
+    "name_ar": "عيران",
+    "category": "drinks",
+    "meal_period": "all-day",
+    "description_en": "Chilled salted yogurt drink — the ultimate shawarma companion.",
+    "description_ar": "مشروب اللبن المملح البارد — الرفيق المثالي للشاورما.",
+    "ingredients": [
+      "yogurt",
+      "water",
+      "salt"
+    ],
+    "allergens": [
+      "dairy"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [
+      "small",
+      "large"
+    ],
+    "modifications": {},
+    "price": 3.5,
+    "image_url": "https://placehold.co/400x300?text=Ayran",
+    "available": true
+  },
+  {
+    "id": "drink-freshjuice-029",
+    "name_en": "Fresh Juice",
+    "name_ar": "عصير طازج",
+    "category": "drinks",
+    "meal_period": "all-day",
+    "description_en": "Freshly squeezed seasonal fruit juice.",
+    "description_ar": "عصير فاكهة موسمية طازجة.",
+    "ingredients": [
+      "seasonal fruit",
+      "ice"
+    ],
+    "allergens": [],
+    "diet_tags": [
+      "vegan",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [
+      "orange",
+      "watermelon",
+      "mango",
+      "pomegranate"
+    ],
+    "modifications": {
+      "sweetness": [
+        "no sugar",
+        "light sugar"
+      ]
+    },
+    "price": 5,
+    "image_url": "https://placehold.co/400x300?text=Fresh+Juice",
+    "available": true
+  },
+  {
+    "id": "coffee-arabic-030",
+    "name_en": "Arabic Coffee",
+    "name_ar": "قهوة عربية",
+    "category": "coffee_tea",
+    "meal_period": "all-day",
+    "description_en": "Light-roasted cardamom coffee served in a traditional dallah.",
+    "description_ar": "قهوة بالهيل خفيفة التحميص تُقدم في دلة تقليدية.",
+    "ingredients": [
+      "arabic coffee",
+      "cardamom",
+      "saffron"
+    ],
+    "allergens": [],
+    "diet_tags": [
+      "vegan",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [
+      "cup",
+      "pot"
+    ],
+    "modifications": {},
+    "price": 3,
+    "image_url": "https://placehold.co/400x300?text=Arabic+Coffee",
+    "available": true
+  },
+  {
+    "id": "coffee-minttea-031",
+    "name_en": "Mint Tea",
+    "name_ar": "شاي بالنعناع",
+    "category": "coffee_tea",
+    "meal_period": "all-day",
+    "description_en": "Fresh mint steeped in boiling water with a drizzle of honey.",
+    "description_ar": "نعناع طازج منقوع في ماء مغلي مع قليل من العسل.",
+    "ingredients": [
+      "fresh mint",
+      "water",
+      "honey"
+    ],
+    "allergens": [],
+    "diet_tags": [
+      "vegan",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [
+      "cup",
+      "pot"
+    ],
+    "modifications": {
+      "sweetness": [
+        "no honey",
+        "light honey",
+        "extra honey"
+      ]
+    },
+    "price": 3,
+    "image_url": "https://placehold.co/400x300?text=Mint+Tea",
+    "available": true
+  },
+  {
+    "id": "coffee-sagetea-032",
+    "name_en": "Sage Tea",
+    "name_ar": "شاي بالمريمية",
+    "category": "coffee_tea",
+    "meal_period": "all-day",
+    "description_en": "Soothing sage herbal tea served with sugar on the side.",
+    "description_ar": "شاي أعشاب المريمية المهدئ مع السكر على الجانب.",
+    "ingredients": [
+      "dried sage",
+      "water"
+    ],
+    "allergens": [],
+    "diet_tags": [
+      "vegan",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [
+      "cup",
+      "pot"
+    ],
+    "modifications": {},
+    "price": 3,
+    "image_url": "https://placehold.co/400x300?text=Sage+Tea",
+    "available": true
+  },
+  {
+    "id": "plate-shawbeef-033",
+    "name_en": "Beef Shawarma Plate",
+    "name_ar": "طبق شاورما لحم",
+    "category": "plates",
+    "meal_period": "lunch",
+    "description_en": "Sliced beef shawarma over vermicelli rice with tahini, sumac onions and salad.",
+    "description_ar": "شاورما لحم مقطعة على أرز بالشعيرية مع طحينة وبصل سماق وسلطة.",
+    "ingredients": [
+      "beef shawarma",
+      "vermicelli rice",
+      "tahini",
+      "sumac onions",
+      "salad"
+    ],
+    "allergens": [
+      "gluten",
+      "sesame"
+    ],
+    "diet_tags": [
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {
+      "sides": [
+        "fries",
+        "extra tahini",
+        "extra salad"
+      ]
+    },
+    "price": 16,
+    "image_url": "https://placehold.co/400x300?text=Beef+Shawarma+Plate",
+    "available": true
+  },
+  {
+    "id": "mezze-warak-034",
+    "name_en": "Warak Dawali",
+    "name_ar": "ورق دوالي",
+    "category": "mezze",
+    "meal_period": "all-day",
+    "description_en": "Stuffed grape leaves with rice, parsley, tomato and lemon, served cold.",
+    "description_ar": "ورق عنب محشو بالأرز والبقدونس والطماطم والليمون، يُقدم بارداً.",
+    "ingredients": [
+      "grape leaves",
+      "rice",
+      "parsley",
+      "tomato",
+      "lemon",
+      "olive oil"
+    ],
+    "allergens": [],
+    "diet_tags": [
+      "vegan",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [
+      "half dozen",
+      "full dozen"
+    ],
+    "modifications": {},
+    "price": 9,
+    "image_url": "https://placehold.co/400x300?text=Warak+Dawali",
+    "available": true
+  },
+  {
+    "id": "mezze-kibbeh-035",
+    "name_en": "Kibbeh",
+    "name_ar": "كبة",
+    "category": "mezze",
+    "meal_period": "all-day",
+    "description_en": "Crispy fried bulgur shells stuffed with spiced minced lamb and pine nuts.",
+    "description_ar": "أصداف برغل مقلية مقرمشة محشوة بلحم الغنم المفروم المتبل والصنوبر.",
+    "ingredients": [
+      "bulgur",
+      "minced lamb",
+      "onion",
+      "pine nuts",
+      "spices"
+    ],
+    "allergens": [
+      "gluten",
+      "tree nuts"
+    ],
+    "diet_tags": [
+      "halal"
+    ],
+    "variants": [
+      "piece",
+      "half dozen"
+    ],
+    "modifications": {
+      "sauces": [
+        "yogurt dip",
+        "tahini"
+      ]
+    },
+    "price": 4,
+    "image_url": "https://placehold.co/400x300?text=Kibbeh",
+    "available": true
+  },
+  {
+    "id": "plate-kafta-036",
+    "name_en": "Kafta Plate",
+    "name_ar": "طبق كفتة",
+    "category": "plates",
+    "meal_period": "lunch",
+    "description_en": "Grilled kafta skewers with rice, grilled tomatoes, onion and tahini.",
+    "description_ar": "سيخ كفتة مشوي مع أرز وطماطم مشوية وبصل وطحينة.",
+    "ingredients": [
+      "kafta",
+      "rice",
+      "grilled tomatoes",
+      "onion",
+      "tahini",
+      "parsley"
+    ],
+    "allergens": [
+      "gluten",
+      "sesame"
+    ],
+    "diet_tags": [
+      "halal"
+    ],
+    "variants": [
+      "2 skewers",
+      "3 skewers"
+    ],
+    "modifications": {
+      "sides": [
+        "fries",
+        "extra salad",
+        "extra tahini"
+      ]
+    },
+    "price": 17,
+    "image_url": "https://placehold.co/400x300?text=Kafta+Plate",
+    "available": true
+  },
+  {
+    "id": "drink-tamarind-037",
+    "name_en": "Tamarind Juice",
+    "name_ar": "عصير تمر هندي",
+    "category": "drinks",
+    "meal_period": "all-day",
+    "description_en": "Sweet and tangy tamarind drink served chilled.",
+    "description_ar": "مشروب التمر الهندي الحلو والحامض يُقدم بارداً.",
+    "ingredients": [
+      "tamarind",
+      "sugar",
+      "water",
+      "ice"
+    ],
+    "allergens": [],
+    "diet_tags": [
+      "vegan",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [
+      "small",
+      "large"
+    ],
+    "modifications": {},
+    "price": 4,
+    "image_url": "https://placehold.co/400x300?text=Tamarind+Juice",
+    "available": true
+  },
+  {
+    "id": "sweet-halaweh-038",
+    "name_en": "Halaweh Bil Jibn",
+    "name_ar": "حلاوة بالجبن",
+    "category": "sweets",
+    "meal_period": "all-day",
+    "description_en": "Creamy sweet tahini halva layered with cheese and rose water syrup.",
+    "description_ar": "حلاوة طحينية كريمية مع جبنة وشيرة ماء الورد.",
+    "ingredients": [
+      "halva",
+      "akkawi cheese",
+      "rose water syrup",
+      "pistachios"
+    ],
+    "allergens": [
+      "dairy",
+      "sesame",
+      "tree nuts"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "halal"
+    ],
+    "variants": [
+      "slice",
+      "plate"
+    ],
+    "modifications": {},
+    "price": 6.5,
+    "image_url": "https://placehold.co/400x300?text=Halaweh+Bil+Jibn",
+    "available": true
+  },
+  {
+    "id": "mezze-shanklish-039",
+    "name_en": "Shanklish Salad",
+    "name_ar": "سلطة شنكليش",
+    "category": "mezze",
+    "meal_period": "all-day",
+    "description_en": "Aged spiced cheese crumbled over diced tomato, onion and olive oil.",
+    "description_ar": "جبنة معتقة متبلة مفتتة فوق طماطم وبصل مقطع وزيت زيتون.",
+    "ingredients": [
+      "shanklish cheese",
+      "tomato",
+      "onion",
+      "olive oil",
+      "dried thyme"
+    ],
+    "allergens": [
+      "dairy"
+    ],
+    "diet_tags": [
+      "vegetarian",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [],
+    "modifications": {},
+    "price": 8,
+    "image_url": "https://placehold.co/400x300?text=Shanklish+Salad",
+    "available": true
+  },
+  {
+    "id": "coffee-turkishcoffee-040",
+    "name_en": "Turkish Coffee",
+    "name_ar": "قهوة تركية",
+    "category": "coffee_tea",
+    "meal_period": "all-day",
+    "description_en": "Finely ground coffee brewed in a cezve, served with lokum.",
+    "description_ar": "قهوة مطحونة ناعماً تُحضر في جزوة وتُقدم مع اللوكوم.",
+    "ingredients": [
+      "fine ground coffee",
+      "water"
+    ],
+    "allergens": [],
+    "diet_tags": [
+      "vegan",
+      "gluten_free",
+      "halal"
+    ],
+    "variants": [
+      "plain",
+      "medium sweet",
+      "sweet"
+    ],
+    "modifications": {},
+    "price": 3.5,
+    "image_url": "https://placehold.co/400x300?text=Turkish+Coffee",
+    "available": true
+  }
+]

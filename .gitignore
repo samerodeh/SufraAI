@@ -5,4 +5,13 @@ app/node_modules/
 __pycache__/
 *.pyc
 .env
-*.json
+
+# Databases
+*.db
+backend/db_scripts/db/
+
+# Chroma vector store
+backend/chroma_db/
+
+# Runtime data (regenerated at runtime)
+backend/runtime_store.json

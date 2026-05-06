@@ -1,0 +1,202 @@
+[
+  {
+    "itemId": "salad-fattoush-021",
+    "category": "salads",
+    "count": 43
+  },
+  {
+    "itemId": "salad-tabbouleh-022",
+    "category": "salads",
+    "count": 38
+  },
+  {
+    "itemId": "coffee-arabic-030",
+    "category": "coffee_tea",
+    "count": 36
+  },
+  {
+    "itemId": "coffee-turkishcoffee-040",
+    "category": "coffee_tea",
+    "count": 31
+  },
+  {
+    "itemId": "mezze-hummus-015",
+    "category": "mezze",
+    "count": 26
+  },
+  {
+    "itemId": "drink-ayran-028",
+    "category": "drinks",
+    "count": 25
+  },
+  {
+    "itemId": "drink-jallab-026",
+    "category": "drinks",
+    "count": 23
+  },
+  {
+    "itemId": "coffee-minttea-031",
+    "category": "coffee_tea",
+    "count": 23
+  },
+  {
+    "itemId": "sweet-baklava-023",
+    "category": "sweets",
+    "count": 20
+  },
+  {
+    "itemId": "coffee-sagetea-032",
+    "category": "coffee_tea",
+    "count": 20
+  },
+  {
+    "itemId": "drink-freshjuice-029",
+    "category": "drinks",
+    "count": 18
+  },
+  {
+    "itemId": "drink-mintlemonade-027",
+    "category": "drinks",
+    "count": 17
+  },
+  {
+    "itemId": "mezze-warak-034",
+    "category": "mezze",
+    "count": 17
+  },
+  {
+    "itemId": "drink-tamarind-037",
+    "category": "drinks",
+    "count": 16
+  },
+  {
+    "itemId": "mezze-makdous-020",
+    "category": "mezze",
+    "count": 15
+  },
+  {
+    "itemId": "sweet-knafeh-024",
+    "category": "sweets",
+    "count": 14
+  },
+  {
+    "itemId": "sweet-halaweh-038",
+    "category": "sweets",
+    "count": 13
+  },
+  {
+    "itemId": "sweet-maamoul-025",
+    "category": "sweets",
+    "count": 13
+  },
+  {
+    "itemId": "mezze-baba-016",
+    "category": "mezze",
+    "count": 12
+  },
+  {
+    "itemId": "plate-shawbeef-033",
+    "category": "plates",
+    "count": 12
+  },
+  {
+    "itemId": "mezze-kibbeh-035",
+    "category": "mezze",
+    "count": 12
+  },
+  {
+    "itemId": "mezze-muhammara-017",
+    "category": "mezze",
+    "count": 12
+  },
+  {
+    "itemId": "sand-shawbeef-008",
+    "category": "sandwiches",
+    "count": 11
+  },
+  {
+    "itemId": "mana-cheese-002",
+    "category": "manaeesh",
+    "count": 11
+  },
+  {
+    "itemId": "sand-shawchicken-007",
+    "category": "sandwiches",
+    "count": 11
+  },
+  {
+    "itemId": "plate-mixgrill-011",
+    "category": "plates",
+    "count": 11
+  },
+  {
+    "itemId": "mezze-foul-019",
+    "category": "mezze",
+    "count": 10
+  },
+  {
+    "itemId": "mezze-labneh-018",
+    "category": "mezze",
+    "count": 10
+  },
+  {
+    "itemId": "plate-shawchicken-012",
+    "category": "plates",
+    "count": 9
+  },
+  {
+    "itemId": "sand-kafta-009",
+    "category": "sandwiches",
+    "count": 9
+  },
+  {
+    "itemId": "mana-lahm-004",
+    "category": "manaeesh",
+    "count": 9
+  },
+  {
+    "itemId": "mana-mixed-003",
+    "category": "manaeesh",
+    "count": 8
+  },
+  {
+    "itemId": "mana-zaatar-001",
+    "category": "manaeesh",
+    "count": 7
+  },
+  {
+    "itemId": "plate-kafta-036",
+    "category": "plates",
+    "count": 6
+  },
+  {
+    "itemId": "mana-kishek-005",
+    "category": "manaeesh",
+    "count": 6
+  },
+  {
+    "itemId": "plate-mezze-014",
+    "category": "plates",
+    "count": 6
+  },
+  {
+    "itemId": "plate-falafel-013",
+    "category": "plates",
+    "count": 5
+  },
+  {
+    "itemId": "sand-falafel-006",
+    "category": "sandwiches",
+    "count": 5
+  },
+  {
+    "itemId": "mezze-shanklish-039",
+    "category": "mezze",
+    "count": 5
+  },
+  {
+    "itemId": "sand-halloumi-010",
+    "category": "sandwiches",
+    "count": 4
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "restaurant_name": "Beit Al Sham",
+  "tagline": "Authentic Levantine Kitchen",
+  "faqs": [
+    {
+      "id": "faq-001",
+      "category": "hours",
+      "question": "What are your opening hours?",
+      "answer": "We are open 7 days a week. Monday to Thursday: 8:00 AM – 11:00 PM. Friday to Sunday: 8:00 AM – 12:00 AM (midnight)."
+    },
+    {
+      "id": "faq-002",
+      "category": "location",
+      "question": "Where are you located?",
+      "answer": "We are located at 142 Rue Saint-Viateur Ouest, Montreal, QC H2T 2L3. Nearest metro: Laurier (Orange Line), 5-minute walk."
+    },
+    {
+      "id": "faq-003",
+      "category": "location",
+      "question": "Is there parking available?",
+      "answer": "Street parking is available on Rue Saint-Viateur and surrounding streets. There is no dedicated private parking lot. We recommend using public transit or arriving early on weekends."
+    },
+    {
+      "id": "faq-004",
+      "category": "halal",
+      "question": "Is your food halal certified?",
+      "answer": "Yes. All our meat (chicken, beef, and lamb) is 100% halal certified. Our certification is renewed annually and is displayed at the restaurant. We do not serve pork or alcohol."
+    },
+    {
+      "id": "faq-005",
+      "category": "dietary",
+      "question": "Do you have vegan options?",
+      "answer": "Yes! Many of our dishes are vegan, including hummus, baba ghanoush, falafel, tabbouleh, fattoush, warak dawali, muhammara, makdous, and most of our drinks. Vegan items are clearly tagged on our menu."
+    },
+    {
+      "id": "faq-006",
+      "category": "dietary",
+      "question": "Do you have gluten-free options?",
+      "answer": "Several dishes are naturally gluten-free, including hummus, baba ghanoush, labneh, shanklish salad, ayran, and most of our drinks. However, our kitchen is not a certified gluten-free facility so we cannot guarantee zero cross-contamination. Please inform your server of any severe allergies."
+    },
+    {
+      "id": "faq-007",
+      "category": "dietary",
+      "question": "Do you accommodate severe allergies?",
+      "answer": "We take allergies seriously. Please inform your server before ordering. We handle common allergens including gluten, dairy, sesame, and tree nuts in our kitchen. While we take precautions, cross-contamination cannot be fully guaranteed."
+    },
+    {
+      "id": "faq-008",
+      "category": "catering",
+      "question": "Do you offer catering services?",
+      "answer": "Yes! We offer full catering services for events, corporate lunches, weddings, and private parties. Our catering menu includes mezze spreads, mixed grill platters, shawarma stations, and dessert trays. Please contact us at least 72 hours in advance. Email: catering@beitalssham.com or call (514) 555-0199."
+    },
+    {
+      "id": "faq-009",
+      "category": "catering",
+      "question": "Do you offer party platters?",
+      "answer": "Yes, we have party platters for 5–50 people. Options include the Mezze Platter, Mixed Grill Platter, Shawarma Box, Sweets Tray (baklava and maamoul), and Mana'eesh Breakfast Box. Minimum 24-hour notice required. Ask for our catering menu."
+    },
+    {
+      "id": "faq-010",
+      "category": "kids",
+      "question": "Do you have a kids menu?",
+      "answer": "Yes! Our kids menu includes a mini cheese mana'eesh, falafel bites with hummus dip, buttered rice with grilled chicken, and fresh juice or milk. Kids meals come with a small sweet. Available for children 10 and under."
+    },
+    {
+      "id": "faq-011",
+      "category": "payment",
+      "question": "What payment methods do you accept?",
+      "answer": "We accept cash, Visa, Mastercard, American Express, and Interac Debit. We also accept Apple Pay and Google Pay. We do not accept personal cheques."
+    },
+    {
+      "id": "faq-012",
+      "category": "reservations",
+      "question": "Do you take reservations?",
+      "answer": "Yes, we accept reservations for groups of 6 or more. For smaller groups, we operate on a walk-in basis. Reservations can be made by phone at (514) 555-0188 or via our website. We recommend booking at least 48 hours ahead for weekends."
+    },
+    {
+      "id": "faq-013",
+      "category": "delivery",
+      "question": "Do you offer delivery?",
+      "answer": "Yes, we deliver through DoorDash, Uber Eats, and Skip The Dishes. We also offer in-house delivery within a 3 km radius for orders over $30 via our website. Delivery hours follow our regular business hours."
+    },
+    {
+      "id": "faq-014",
+      "category": "delivery",
+      "question": "Do you offer takeout?",
+      "answer": "Absolutely! Takeout orders can be placed by phone at (514) 555-0188, in person at the counter, or online through our website. Orders are typically ready in 15–20 minutes."
+    },
+    {
+      "id": "faq-015",
+      "category": "hours",
+      "question": "Are you open on holidays?",
+      "answer": "We are open on most holidays including Eid Al Fitr and Eid Al Adha. We may have reduced hours on statutory holidays like Christmas and New Year's Day. Please check our social media (@BeitalSham) for holiday hour updates."
+    }
+  ],
+  "contact": {
+    "phone": "(514) 555-0188",
+    "catering_phone": "(514) 555-0199",
+    "email": "info@beitalssham.com",
+    "catering_email": "catering@beitalssham.com",
+    "instagram": "@BeitalSham",
+    "address": "142 Rue Saint-Viateur Ouest, Montreal, QC H2T 2L3",
+    "google_maps_url": "https://maps.google.com/?q=142+Rue+Saint-Viateur+Ouest+Montreal"
+  }
+}

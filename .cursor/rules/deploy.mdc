@@ -1,0 +1,55 @@
+---
+description: Rules for pushing and deploying to GitHub repository
+globs:
+alwaysApply: true
+---
+
+# GitHub Deployment Rules
+
+Remote repository: https://github.com/samerodeh/falafel_fullstack_chatbot_application
+Main branch: main
+
+## Before Every Push
+
+1. **Never commit secrets** — check that `.env` is in `.gitignore` and not staged
+2. **Never commit database files** — `*.db`, `sufra.db`, `runtime_store.json` must not be staged
+3. **Never commit large binary/data files** — `chroma_db/`, `venv/`, `node_modules/` must be gitignored
+4. **Run the backend** to confirm no import errors before pushing:
+   ```
+   uvicorn main:app --port 8001
+   ```
+
+## Commit Convention
+
+Use this format for commit messages:
+```
+<type>: <short description>
+
+Examples:
+feat: add item stats database
+fix: restore auth.database import path
+refactor: move user_db to db/ module
+chore: update .gitignore
+```
+
+Types: `feat`, `fix`, `refactor`, `chore`, `docs`, `style`
+
+## Push Steps
+
+```bash
+git add <specific files>        # never use git add -A blindly
+git status                      # verify only intended files are staged
+git commit -m "type: message"
+git push origin main
+```
+
+## Files That Must NEVER Be Pushed
+
+- `backend/.env`
+- `backend/sufra.db`
+- `backend/runtime_store.json`
+- `backend/venv/`
+- `backend/chroma_db/`
+- `app/node_modules/`
+- `backend/db_scripts/db/*.db`
+- Any file containing API keys, passwords, or tokens
