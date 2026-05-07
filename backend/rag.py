@@ -27,7 +27,7 @@ def build_index():
     """Load menu.json and faq.json and embed them into ChromaDB."""
 
     # --- Menu items ---
-    with open("menu.json", "r", encoding="utf-8") as f:
+    with open("data/menu.json", "r", encoding="utf-8") as f:
         items = json.load(f)
 
     menu_collection.upsert(
@@ -53,7 +53,7 @@ def build_index():
     print(f"Indexed {len(items)} menu items.")
 
     # --- FAQs ---
-    with open("faq.json", "r", encoding="utf-8") as f:
+    with open("data/faq.json", "r", encoding="utf-8") as f:
         faq_data = json.load(f)
 
     faqs = faq_data["faqs"]

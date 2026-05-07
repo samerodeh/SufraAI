@@ -13,7 +13,7 @@ def get_recs(user_id: str = "guest", cart_items: str = ""):
     cart = [x.strip() for x in cart_items.split(",") if x.strip()]
     recs = get_recommendations(cart) if cart else get_popular_items()
 
-    with open("menu.json", "r", encoding="utf-8") as f:
+    with open("data/menu.json", "r", encoding="utf-8") as f:
         menu = json.load(f)
     menu_map = {item["id"]: item for item in menu}
 

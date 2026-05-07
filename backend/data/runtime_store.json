@@ -1,0 +1,96 @@
+{
+  "users": {
+    "guest": {
+      "userId": "guest",
+      "languagePreference": "auto",
+      "dietaryProfile": {
+        "halal": false,
+        "vegan": false,
+        "allergies": []
+      },
+      "theme": "system",
+      "voiceEnabled": false,
+      "favorites": [],
+      "usualOrderPreset": [],
+      "orderHistory": [],
+      "updatedAt": "2026-04-30T04:11:54.601766+00:00"
+    },
+    "user_3882498a9e": {
+      "userId": "user_3882498a9e",
+      "languagePreference": "auto",
+      "dietaryProfile": {
+        "halal": false,
+        "vegan": false,
+        "allergies": []
+      },
+      "theme": "system",
+      "voiceEnabled": false,
+      "favorites": [],
+      "usualOrderPreset": [],
+      "orderHistory": [],
+      "updatedAt": "2026-05-05T02:17:50.569264+00:00"
+    }
+  },
+  "promotions": {
+    "breakfast-combo": {
+      "promoId": "breakfast-combo",
+      "title": "Breakfast Combo",
+      "description": "Add coffee with any manaeesh and save 15%.",
+      "startAt": "2026-04-30T00:00:00+00:00",
+      "endAt": "2026-04-30T23:59:59+00:00",
+      "applicableCategories": [
+        "manaeesh",
+        "coffee_tea"
+      ],
+      "applicableItems": [],
+      "priority": 1,
+      "isActive": true
+    },
+    "weekend-dessert": {
+      "promoId": "weekend-dessert",
+      "title": "Weekend Dessert Offer",
+      "description": "Get 10% off desserts after 6pm.",
+      "startAt": "2026-04-30T00:00:00+00:00",
+      "endAt": "2026-04-30T23:59:59+00:00",
+      "applicableCategories": [
+        "sweets"
+      ],
+      "applicableItems": [],
+      "priority": 2,
+      "isActive": true
+    }
+  },
+  "orders": {},
+  "reservations": {},
+  "upsell_rules": [
+    {
+      "source_item": "latte",
+      "suggestions": [
+        "Chocolate Croissant",
+        "Espresso Shot"
+      ]
+    },
+    {
+      "source_item": "espresso",
+      "suggestions": [
+        "Date Cookies",
+        "Cheesecake Slice"
+      ]
+    },
+    {
+      "source_item": "manaeesh",
+      "suggestions": [
+        "Ayran",
+        "Arabic Coffee"
+      ]
+    }
+  ],
+  "auth": {
+    "samer.odeh592@outlook.com": {
+      "userId": "user_3882498a9e",
+      "name": "samer odeh",
+      "email": "samer.odeh592@outlook.com",
+      "hashedPassword": "$2b$12$kmeFlwlaz/7hsnoaUJlqs.d3Wtl.7uFlhPNn4VWf5gg4ZxRfZHck6"
+    }
+  }
+}

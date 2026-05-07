@@ -13,6 +13,7 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from data_store import seed_promotions, get_promotions
 from db.user_db import init_db
+from db.orders_db import init_orders_db
 from rag import build_index
 # other imports
 import json
@@ -20,6 +21,7 @@ import json
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     init_db()
+    init_orders_db()
     build_index()
     yield
 
@@ -42,7 +44,7 @@ def root():
 @app.get("/faq")
 def get_faq():
     """Return all FAQs."""
-    with open("faq.json", "r", encoding="utf-8") as f:
+    with open("data/faq.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     return data["faqs"]
 

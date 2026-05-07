@@ -9,7 +9,7 @@ router = APIRouter(prefix="/menu", tags=["menu"])
 @router.get("/")
 def get_menu():
     """Return the full menu from menu.json."""
-    with open("menu.json", "r", encoding="utf-8") as f:
+    with open("data/menu.json", "r", encoding="utf-8") as f:
         data = json.load(f)
     for item in data:
         item["isAvailable"] = bool(item.get("available", True))
@@ -17,7 +17,7 @@ def get_menu():
 
 @router.get("/availability")
 def get_menu_availability():
-    with open("menu.json", "r", encoding="utf-8") as f:
+    with open("data/menu.json", "r", encoding="utf-8") as f:
         items = json.load(f)
     return [
         {
@@ -33,7 +33,7 @@ def get_menu_availability():
 
 @router.get("/{category}")
 def get_menu_availability():
-    with open("menu.json", "r", encoding="utf-8") as f:
+    with open("data/menu.json", "r", encoding="utf-8") as f:
         items = json.load(f)
     return [
         {

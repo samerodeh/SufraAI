@@ -1,4 +1,5 @@
 # ---------- imports ----------
+from httpx import Response
 from .agent_utilities import llm, localize, detect_language
 import json
 from data_store import get_user_profile
@@ -13,83 +14,31 @@ from .menu_agent import menu_agent
 from .recommendation_agent import recommendation_agent
 
 
+class RouterAgent: 
 
-# ---------- Router ----------
-def router(message: str, history: list = [], user_id: str = "guest") -> str:
-    # Step 1 — guard check
-    guard = guard_agent(message)
-    profile = get_user_profile(user_id)
-    preferred_lang = profile.get("languagePreference", "auto")
-    lang = detect_language(message) if preferred_lang == "auto" else preferred_lang
+    def __init__():
+        pass    
 
-    if guard.get("classification") == "rude":
-        return localize(
-            "I'm sorry, I can't help with that. Please keep the conversation respectful.",
-            "عذراً، لا يمكنني المساعدة بهذا الطلب. يرجى الحفاظ على أسلوب محترم.",
-            lang,
-        )
-    if guard.get("classification") == "off_topic":
-        return localize(
-            "I can only help with questions about Sufra's menu, orders, reservations, and restaurant info. What can I help you with?",
-            "يمكنني المساعدة فقط في أسئلة قائمة سفرة والطلبات والحجوزات ومعلومات المطعم. كيف أساعدك؟",
-            lang,
-        )
 
-    # Step 2 — route to correct agent
-    route = llm(
-        system="""You are a router for a restaurant chatbot.
-Classify the message into one of: menu, order, reservation, dietary, order_status, reorder, favorites, usual, recommendation
-- menu: questions about dishes, prices, ingredients, hours, location, FAQs
-- order: customer wants to place or modify an order
-- reservation: customer wants to book a table
-- dietary: questions about allergens, vegan, halal, gluten-free
-- order_status: user asks about order progress/status
-- reorder: user asks for previous order or reorder
-- favorites: user asks for favorites or saved items
-- usual: user asks for usual order
-- recommendation: customer asks for recommendations, what goes well with something, what's popular, suggest something, what should I order
-- continuation: short replies like yes, no, thanks, correct, sure, please
-For continuation messages, look at the conversation history to decide which agent to route to.
-Respond with JSON only: {"agent": "menu"}""",
-        user=message,
-        history=history
-    )
+    def get_router_agent_response():
 
-    try:
-        agent = json.loads(route).get("agent", "menu")
-    except:
-        agent = "menu"
 
-    if agent == "order" or (agent == "continuation" and any(m["content"] for m in history if "order" in m.get("content", "").lower())):
-        return order_agent(message, history, user_id)
-    elif agent == "order_status":
-        return localize("Your order is currently in: preparing.", "طلبك حالياً في مرحلة: التحضير.", lang)
-    elif agent == "reorder":
-        return order_history_agent(message, user_id)
-    elif agent == "favorites":
-        favs = profile.get("favorites", [])
-        if not favs:
-            return localize("You don't have favorites yet.", "لا توجد عناصر مفضلة لديك بعد.", lang)
-        return localize(
-            f"Your favorites are: {', '.join(favs)}.",
-            f"مفضلاتك هي: {', '.join(favs)}.",
-            lang,
-        )
-    elif agent == "usual":
-        usual = profile.get("usualOrderPreset", [])
-        if not usual:
-            return localize("You have no usual order set yet.", "لا يوجد لديك طلب معتاد محفوظ بعد.", lang)
-        labels = [f"{x.get('itemId','item')} x{x.get('quantity',1)}" for x in usual]
-        return localize(
-            f"Your usual order is: {', '.join(labels)}.",
-            f"طلبك المعتاد هو: {', '.join(labels)}.",
-            lang,
-        )
-    elif agent == "recommendation":
-        return recommendation_agent(message, history, user_id)
-    elif agent == "reservation":
-        return reservation_agent(message, history, user_id)
-    elif agent == "dietary":
-        return dietary_agent(message, history, user_id)
-    else:
-        return menu_agent(message, history, user_id)
+        response = llm(
+            system_prompt = """
+            You are a helpful AI assistant for a sufra restaraunt application.
+
+            Your task is to determine what agent should handle the user input. You have 3 agents to choose from:
+
+            1. details_agent: This agent is responsible for answering questions about the coffee shop, like location, delivery places, working hours, details about menu items.
+            2. order_taking_agent: This agent is responsible for taking orders from the user. It's responsible to have a conversation with the user about the order until the order is complete.
+            3. recommendation_agent: This agent is responsible for giving recommendations to the user about what to buy. If the user asks for a recommendation, this agent should handle it.
+
+            Your output should be in a structured json format like so. each key is a string and each value is a string. Make sure to follow the format exactly:
+
+            {
+            "chain of thought": go over each of the agents above and write some of your thoughts about what agent is this input relevant to.
+            "decision": "details_agent" or "order_taking_agent" or "recommendation_agent". Pick one of those. and only write the word.
+            "message": leave the message empty.
+            }
+            """  
+        )  

@@ -7,7 +7,7 @@ import sqlite3
 from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional
 
-DB_FILE = os.path.join(os.path.dirname(__file__), "..", "sufra.db")
+DB_FILE = os.path.join(os.path.dirname(__file__), "..", "db_files", "user_auth.db")
 
 
 def get_conn() -> sqlite3.Connection:

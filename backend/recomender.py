@@ -17,7 +17,7 @@ def get_recommendations(cart_item_ids: list, top_n: int = 3) -> list:
     Given items currently in the cart, return the top N recommended itemIds.
     Uses Apriori rules, falls back to popularity if no rules found.
     """
-    rules = _load("apriori_recommendations.json")
+    rules = _load("data/trained_recomendations_data/apriori_recommendations.json")
     scores = {}
 
     for item_id in cart_item_ids:
@@ -41,7 +41,7 @@ def get_popular_items(category: str = None, exclude: list = None, top_n: int = 5
     Returns the most popular itemIds.
     Optionally filter by category, and exclude already-carted items.
     """
-    popularity = _load("popularity_recommendations.json")
+    popularity = _load("data/trained_recomendations_data/popularity_recommendations.json")
     exclude = exclude or []
 
     filtered = [

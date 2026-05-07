@@ -30,7 +30,7 @@ def localize(text_en: str, text_ar: str, lang: str) -> str:
 
 
 def get_menu_items() -> list:
-    with open("menu.json", "r", encoding="utf-8") as f:
+    with open("data/menu.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
 
