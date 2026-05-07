@@ -4,7 +4,7 @@ import {
   StyleSheet, SafeAreaView, Switch, ScrollView, Alert
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { useLanguage, useTranslation } from "../context/LanguageContext";
+import { useTranslation } from "../context/LanguageContext";
 import { fetchUserProfile, updateUserProfile, DEFAULT_USER_ID } from "../constants/featuresApi";
 import { useThemeMode } from "../context/ThemeContext";
 import { useAuth } from "../context/AuthContext";
@@ -26,7 +26,6 @@ const DIETARY_OPTIONS = [
 export default function ProfileScreen() {
   const navigation = useNavigation<any>();
   const { t } = useTranslation();
-  const { language, toggleLanguage } = useLanguage();
   const [dietary, setDietary] = useState<string[]>([]);
   const [allergies, setAllergies] = useState<string[]>([]);
   const [voiceEnabled, setVoiceEnabled] = useState(false);
@@ -64,7 +63,7 @@ export default function ProfileScreen() {
 
   const saveProfile = async () => {
     const payload = {
-      languagePreference: language,
+      languagePreference: "en",
       voiceEnabled,
       theme: themeMode,
       dietaryProfile: {
@@ -101,19 +100,6 @@ export default function ProfileScreen() {
           <TouchableOpacity style={s.signOutBtn} onPress={signOut}>
             <Text style={s.signOutText}>Sign out</Text>
           </TouchableOpacity>
-        </View>
-        <View style={s.card}>
-          <Text style={s.cardTitle}>{t("profile.language")}</Text>
-          <View style={s.langRow}>
-            <Text style={[s.langLabel, language === "en" && s.langActive]}>English</Text>
-            <Switch
-              value={language === "ar"}
-              onValueChange={toggleLanguage}
-              trackColor={{ false: COLORS.border, true: COLORS.primary }}
-              thumbColor="#fff"
-            />
-            <Text style={[s.langLabel, language === "ar" && s.langActive]}>العربية</Text>
-          </View>
         </View>
         <View style={s.card}>
           <Text style={s.cardTitle}>Theme</Text>

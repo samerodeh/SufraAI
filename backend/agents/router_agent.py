@@ -1,10 +1,6 @@
-# ---------- imports ----------
-from httpx import Response
-from .agent_utilities import llm, localize, detect_language
-import json
-from data_store import get_user_profile
+from .agent_utilities import llm_json
+from copy import deepcopy
 
-# ------- import agents ------------
 from .dietary_agent import dietary_agent
 from .guard_agent import guard_agent
 from .order_agent import order_agent
@@ -14,31 +10,57 @@ from .menu_agent import menu_agent
 from .recommendation_agent import recommendation_agent
 
 
-class RouterAgent: 
+class RouterAgent:
 
-    def __init__():
-        pass    
+    def __init__(self):
+        pass
+
+    def get_router_agent_response(self, message: str, history: list = [], user_id: str = "guest") -> str:
+        history = deepcopy(history)
+
+        guard_result = guard_agent(message, history)
+        if guard_result.get("classification") == "off_topic":
+            return guard_result.get("message", "Sorry, I can't help with that.")
+
+        result = llm_json(
+            system_prompt="""You are a router for Sufra, a Lebanese restaurant chatbot.
+
+                Determine which agent should handle the user's message. Choose from:
+
+                1. menu_agent: Questions about menu items, ingredients, prices, restaurant location, working hours, or general restaurant info.
+                2. order_agent: The user wants to place, modify, or confirm an order.
+                3. recommendation_agent: The user asks for recommendations or suggestions on what to eat.
+                4. reservation_agent: The user wants to make a table reservation.
+                5. dietary_agent: The user asks about dietary restrictions, allergies, halal, vegan, or specific food preferences.
+                6. order_history_agent: The user asks about their previous or past orders.
+
+                Respond with JSON only:
+                {
+                    "chain_of_thought": "brief reasoning about which agent fits",
+                    "decision": "menu_agent" or "order_agent" or "recommendation_agent" or "reservation_agent" or "dietary_agent" or "order_history_agent"
+                }""",
+            user=message,
+            history=history,
+            fallback={"decision": "menu_agent"}
+        )
+
+        decision = result.get("decision", "menu_agent")
+
+        if decision == "order_agent":
+            return order_agent(message, history, user_id)
+        elif decision == "recommendation_agent":
+            return recommendation_agent(message, history, user_id)
+        elif decision == "reservation_agent":
+            return reservation_agent(message, history, user_id)
+        elif decision == "dietary_agent":
+            return dietary_agent(message, history, user_id)
+        elif decision == "order_history_agent":
+            return order_history_agent(message, user_id)
+        else:
+            return menu_agent(message, history, user_id)
 
 
-    def get_router_agent_response():
+def router_agent(message: str, history: list = [], user_id: str = "guest") -> str:
+    return RouterAgent().get_router_agent_response(message, history, user_id)
 
-
-        response = llm(
-            system_prompt = """
-            You are a helpful AI assistant for a sufra restaraunt application.
-
-            Your task is to determine what agent should handle the user input. You have 3 agents to choose from:
-
-            1. details_agent: This agent is responsible for answering questions about the coffee shop, like location, delivery places, working hours, details about menu items.
-            2. order_taking_agent: This agent is responsible for taking orders from the user. It's responsible to have a conversation with the user about the order until the order is complete.
-            3. recommendation_agent: This agent is responsible for giving recommendations to the user about what to buy. If the user asks for a recommendation, this agent should handle it.
-
-            Your output should be in a structured json format like so. each key is a string and each value is a string. Make sure to follow the format exactly:
-
-            {
-            "chain of thought": go over each of the agents above and write some of your thoughts about what agent is this input relevant to.
-            "decision": "details_agent" or "order_taking_agent" or "recommendation_agent". Pick one of those. and only write the word.
-            "message": leave the message empty.
-            }
-            """  
-        )  
+router = router_agent

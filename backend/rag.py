@@ -10,7 +10,7 @@ load_dotenv()
 client = chromadb.PersistentClient(path="./chroma_db")
 
 embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(
-    model_name="all-MiniLM-L6-v2"
+    model_name="paraphrase-multilingual-MiniLM-L12-v2"
 )
 
 menu_collection = client.get_or_create_collection(
@@ -33,7 +33,7 @@ def build_index():
     menu_collection.upsert(
         ids=[item["id"] for item in items],
         documents=[
-            f"{item['name_en']} - {item['description_en']} - "
+            f"{item['name_en']} {item.get('name_ar', '')} - {item['description_en']} {item.get('description_ar', '')} - "
             f"Category: {item['category']} - Price: ${item['price']} - "
             f"Diet tags: {', '.join(item['diet_tags'])} - "
             f"Allergens: {', '.join(item['allergens'])}"

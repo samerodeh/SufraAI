@@ -2,31 +2,60 @@ from groq import Groq
 from dotenv import load_dotenv
 import os
 import json
+import time
 from data_store import get_user_profile
 
-load_dotenv()
+load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
-def llm(system: str, user: str, history: list = []) -> str:
-    messages = [{"role": "system", "content": system}]
+def llm(system_prompt: str, user: str, history: list = []) -> str:
+    messages = [{"role": "system", "content": system_prompt}]
     messages += history
     messages.append({"role": "user", "content": user})
-    response = client.chat.completions.create(
-        model="llama-3.1-8b-instant",
-        messages=messages
-    )
-    return response.choices[0].message.content
+    for attempt in range(2):
+        try:
+            response = client.chat.completions.create(
+                model="llama-3.1-8b-instant",
+                messages=messages
+            )
+            return response.choices[0].message.content
+        except Exception:
+            if attempt == 0:
+                time.sleep(1)
+                continue
+            return "I'm getting too many requests right now. Please try again in a moment."
+
+
+def llm_json(system_prompt: str, user: str, history: list = [], fallback: dict = {}) -> dict:
+    messages = [{"role": "system", "content": system_prompt}]
+    messages += history
+    messages.append({"role": "user", "content": user})
+    response = None
+    for attempt in range(2):
+        try:
+            response = client.chat.completions.create(
+                model="llama-3.1-8b-instant",
+                messages=messages,
+                response_format={"type": "json_object"}
+            )
+            break
+        except Exception:
+            if attempt == 0:
+                time.sleep(1)
+                continue
+            return fallback
+    try:
+        return json.loads(response.choices[0].message.content)
+    except:
+        return fallback
 
 
 def detect_language(text: str) -> str:
-    for ch in text:
-        if "\u0600" <= ch <= "\u06FF":
-            return "ar"
     return "en"
 
 
 def localize(text_en: str, text_ar: str, lang: str) -> str:
-    return text_ar if lang == "ar" else text_en
+    return text_en
 
 
 def get_menu_items() -> list:

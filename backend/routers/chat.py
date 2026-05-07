@@ -16,8 +16,11 @@ router = APIRouter(tags=["chat"])
 
 @router.post("/chat")
 def chat(body: llm_response):
-    response = agent_router(body.message, body.history, body.user_id)
-    return {"response": response}
+    try:
+        response = agent_router(body.message, body.history, body.user_id)
+        return {"response": response}
+    except Exception:
+        return {"response": "I'm having trouble right now. Please try again in a moment."}
 
 @router.post("/chat/stream")
 async def chat_stream(body: llm_response):

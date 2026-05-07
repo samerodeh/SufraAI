@@ -11,7 +11,7 @@ class GuardAgent:
     def get_agent_response(self, message: str, history: list = []) -> dict:
         history = deepcopy(history)
         raw = llm(
-            system="""You are a helpful AI assistant for Sufra, a Lebanese restaurant.
+            system_prompt="""You are a helpful AI assistant for Sufra, a Lebanese restaurant.
             Your task is to determine whether the user's message is relevant to the restaurant.
 
             The user is allowed to:
@@ -19,6 +19,9 @@ class GuardAgent:
             2. Ask about menu items (ingredients, details, pricing).
             3. Make an order.
             4. Ask for recommendations.
+            5. Make or ask about a table reservation.
+            6. Ask about their previous or past orders.
+            7. Ask about dietary restrictions, allergies, or food preferences.
 
             The user is NOT allowed to:
             1. Ask about anything unrelated to the restaurant.

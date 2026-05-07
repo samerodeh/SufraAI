@@ -1,5 +1,5 @@
 # --------------- imports ------------------
-from .agent_utilities import llm, detect_language
+from .agent_utilities import llm
 from rag import query_menu
 import json
 import os
@@ -27,14 +27,11 @@ class OrderAgent:
         query = message if len(message.split()) > 2 else " ".join(user_messages[-3:] + [message])
         menu_results = query_menu(query)
         profile = get_user_profile(user_id)
-        lang = profile.get("languagePreference", "auto")
-        if lang == "auto":
-            lang = detect_language(message)
         dietary = profile.get("dietaryProfile", {})
         context = "\n".join(menu_results)
 
         confirmation_check = llm(
-            system="""You are detecting if a customer is confirming their final order.
+            system_prompt="""You are detecting if a customer is confirming their final order.
 Respond with JSON only: {"confirmed": true, "items": [{"itemId": "...", "name": "...", "quantity": 1, "price": 0.0}]}
 If not confirmed yet, respond: {"confirmed": false, "items": []}
 Only set confirmed=true if the user clearly says yes/confirm/place order/go ahead.""",
@@ -52,8 +49,7 @@ Only set confirmed=true if the user clearly says yes/confirm/place order/go ahea
             return "Your order has been placed! We'll start preparing it shortly."
 
         return llm(
-            system=f"""You are Sufra's order assistant. Help the customer place their order.
-Language: {lang}
+            system_prompt=f"""You are Sufra's order assistant. Help the customer place their order.
 Dietary profile: {json.dumps(dietary, ensure_ascii=False)}
 
 FULL MENU (only these items exist — do not accept or suggest anything not listed here):
@@ -66,8 +62,7 @@ Rules:
 - If the requested item is NOT in the full menu, clearly say it's not available and suggest a similar item that IS in the menu.
 - If the item is listed but available: false, say it's currently sold out.
 - Confirm item name and quantity before asking the customer to confirm the order.
-- Keep replies brief — one sentence maximum.
-- Always respond in language: {lang}.""",
+- Keep replies brief — one sentence maximum.""",
             user=message,
             history=history
         )

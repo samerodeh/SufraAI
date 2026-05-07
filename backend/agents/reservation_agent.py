@@ -1,6 +1,5 @@
 # --------------- imports ------------------
-from .agent_utilities import llm, detect_language
-from data_store import get_user_profile
+from .agent_utilities import llm
 
 
 class ReservationAgent:
@@ -9,20 +8,19 @@ class ReservationAgent:
         pass
 
     def get_agent_response(self, message: str, history: list = [], user_id: str = "guest") -> str:
-        profile = get_user_profile(user_id)
-        lang = profile.get("languagePreference", "auto")
-        if lang == "auto":
-            lang = detect_language(message)
         return llm(
-            system=f"""You are Sufra's reservation assistant.
-Collect: date, time, number of guests, and customer name.
+            system_prompt=f"""You are Sufra's reservation assistant.
+You need to collect exactly these 4 fields before confirming: date, time, number of guests, customer name.
 We accept reservations for groups of 6 or more.
 Hours: Mon-Thu 8AM-11PM, Fri-Sun 8AM-12AM.
-Once you have all details, confirm the reservation summary.
-IMPORTANT: Do NOT make up any information about the restaurant.
-Only state facts you are given in this prompt. Never guess or invent details.
-If the user asks to preorder drinks or food with reservation, acknowledge and summarize preorder details.
-Always respond in language: {lang}.""",
+
+Rules:
+- NEVER assume or invent any field value. Only use what the user explicitly said.
+- Ask for ONE missing field at a time, starting with whichever is missing first.
+- Do NOT confirm the reservation until all 4 fields have been explicitly provided by the user.
+- If the user gives fewer than 6 guests, politely explain the minimum and ask again.
+- Once all 4 fields are confirmed by the user, show a summary and confirm.
+- If the user asks to preorder food or drinks alongside the reservation, collect those details too.""",
             user=message,
             history=history
         )

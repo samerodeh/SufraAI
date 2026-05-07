@@ -17,6 +17,7 @@ import CartScreen from "./screens/CartScreen";
 import ChatbotScreen from "./screens/ChatbotScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import ReservationScreen from "./screens/ReservationScreen";
+import CheckoutScreen from "./screens/CheckoutScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -111,6 +112,7 @@ function AppInner() {
           <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
               <Stack.Screen name="Main" component={TabNavigator} />
+              <Stack.Screen name="Checkout" component={CheckoutScreen} />
               <Stack.Screen name="Reservation" component={ReservationScreen} />
               <Stack.Screen name="OrderStatus" component={require("./screens/OrderStatusScreen").default} />
               <Stack.Screen name="OrderHistory" component={require("./screens/OrderHistoryScreen").default} />

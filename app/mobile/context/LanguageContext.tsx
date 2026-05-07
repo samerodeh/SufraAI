@@ -1,11 +1,10 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext } from "react";
 import i18n from "i18next";
 import { initReactI18next, useTranslation } from "react-i18next";
 import en from "../i18n/en.json";
-import ar from "../i18n/ar.json";
 
 i18n.use(initReactI18next).init({
-  resources: { en: { translation: en }, ar: { translation: ar } },
+  resources: { en: { translation: en } },
   lng: "en",
   fallbackLng: "en",
   interpolation: { escapeValue: false },
@@ -24,16 +23,8 @@ const LanguageContext = createContext<LanguageContextType>({
 });
 
 export const LanguageProvider = ({ children }: { children: React.ReactNode }) => {
-  const [language, setLanguage] = useState("en");
-
-  const toggleLanguage = () => {
-    const newLang = language === "en" ? "ar" : "en";
-    setLanguage(newLang);
-    i18n.changeLanguage(newLang);
-  };
-
   return (
-    <LanguageContext.Provider value={{ language, toggleLanguage, isRTL: language === "ar" }}>
+    <LanguageContext.Provider value={{ language: "en", toggleLanguage: () => {}, isRTL: false }}>
       {children}
     </LanguageContext.Provider>
   );
