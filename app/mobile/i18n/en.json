@@ -31,10 +31,10 @@
     "remove": "Remove"
   },
   "chatbot": {
-    "title": "Sufra Assistant",
+    "title": "SufraAI",
     "placeholder": "Ask me anything...",
     "send": "Send",
-    "greeting": "Marhaba! I'm Sufra's assistant. How can I help you today?"
+    "greeting": "Marhaba! I'm SufraAI. How can I help you today?"
   },
   "profile": {
     "title": "Profile",

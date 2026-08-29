@@ -1,6 +1,5 @@
 # --------------- imports ------------------
-from .agent_utilities import llm, detect_language
-from data_store import get_user_profile
+from .agent_utilities import llm, resolve_language
 
 
 class ReservationAgent:
@@ -8,11 +7,10 @@ class ReservationAgent:
     def __init__(self):
         pass
 
-    def get_agent_response(self, message: str, history: list = [], user_id: str = "guest") -> str:
-        profile = get_user_profile(user_id)
-        lang = profile.get("languagePreference", "auto")
-        if lang == "auto":
-            lang = detect_language(message)
+    def get_agent_response(self, message: str, history: list = None,
+                           user_id: str = "guest") -> str:
+        history = history or []
+        lang = resolve_language(message, user_id)
         return llm(
             system=f"""You are Sufra's reservation assistant.
 Collect: date, time, number of guests, and customer name.
@@ -28,5 +26,5 @@ Always respond in language: {lang}.""",
         )
 
 
-def reservation_agent(message: str, history: list = [], user_id: str = "guest") -> str:
+def reservation_agent(message: str, history: list = None, user_id: str = "guest") -> str:
     return ReservationAgent().get_agent_response(message, history, user_id)

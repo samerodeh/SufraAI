@@ -1,6 +1,5 @@
 # --------------- imports ------------------
-from .agent_utilities import llm, detect_language, get_menu_items
-from data_store import get_user_profile
+from .agent_utilities import get_menu_items, llm, parse_json, resolve_language
 from recomender import get_recommendations, get_popular_items
 import json
 
@@ -10,11 +9,10 @@ class RecommendationAgent:
     def __init__(self):
         pass
 
-    def get_agent_response(self, message: str, history: list = [], user_id: str = "guest") -> str:
-        profile = get_user_profile(user_id)
-        lang = profile.get("languagePreference", "auto")
-        if lang == "auto":
-            lang = detect_language(message)
+    def get_agent_response(self, message: str, history: list = None,
+                           user_id: str = "guest") -> str:
+        history = history or []
+        lang = resolve_language(message, user_id)
 
         menu = get_menu_items()
         menu_map = {item["id"]: item for item in menu}
@@ -30,10 +28,8 @@ Menu items available: {', '.join([item['name_en'] for item in menu])}""",
             history=history
         )
 
-        try:
-            mentioned_names = json.loads(extraction).get("items", [])
-        except:
-            mentioned_names = []
+        mentioned = parse_json(extraction, default={"items": []}).get("items", [])
+        mentioned_names = [str(n) for n in mentioned if isinstance(n, str)]
 
         cart_ids = [name_to_id[name.lower()] for name in mentioned_names if name.lower() in name_to_id]
         rec_ids = get_recommendations(cart_ids) if cart_ids else get_popular_items()
@@ -43,7 +39,7 @@ Menu items available: {', '.join([item['name_en'] for item in menu])}""",
             rec_items = [menu_map[rid] for rid in get_popular_items() if rid in menu_map]
 
         rec_context = "\n".join([
-            f"- {item['name_en']} ({item['category']}) — {item.get('price', '')} AED: {item.get('description_en', '')}"
+            f"- {item['name_en']} ({item['category']}) — ${item.get('price', '')}: {item.get('description_en', '')}"
             for item in rec_items
         ])
 
@@ -62,5 +58,5 @@ Recommended items:
         )
 
 
-def recommendation_agent(message: str, history: list = [], user_id: str = "guest") -> str:
+def recommendation_agent(message: str, history: list = None, user_id: str = "guest") -> str:
     return RecommendationAgent().get_agent_response(message, history, user_id)

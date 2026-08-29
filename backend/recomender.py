@@ -2,7 +2,7 @@
 import json
 import os
 
-_BASE = os.path.dirname(__file__)
+_BASE = os.path.dirname(os.path.abspath(__file__))
 
 def _load(filename):
     path = os.path.join(_BASE, filename)

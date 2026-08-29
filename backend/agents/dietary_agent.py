@@ -1,5 +1,5 @@
 # --------------- imports ------------------
-from .agent_utilities import llm, detect_language
+from .agent_utilities import llm, resolve_language
 from rag import query_menu
 import json
 from data_store import get_user_profile
@@ -10,13 +10,12 @@ class DietaryAgent:
     def __init__(self):
         pass
 
-    def get_agent_response(self, message: str, history: list = [], user_id: str = "guest") -> str:
+    def get_agent_response(self, message: str, history: list = None,
+                           user_id: str = "guest") -> str:
+        history = history or []
         menu_results = query_menu(message)
-        profile = get_user_profile(user_id)
-        lang = profile.get("languagePreference", "auto")
-        if lang == "auto":
-            lang = detect_language(message)
-        dietary = profile.get("dietaryProfile", {})
+        lang = resolve_language(message, user_id)
+        dietary = get_user_profile(user_id).get("dietaryProfile", {})
         context = "\n".join(menu_results)
         return llm(
             system=f"""You are Sufra's dietary advisor.
@@ -31,5 +30,5 @@ Always respond in language: {lang}.""",
         )
 
 
-def dietary_agent(message: str, history: list = [], user_id: str = "guest") -> str:
+def dietary_agent(message: str, history: list = None, user_id: str = "guest") -> str:
     return DietaryAgent().get_agent_response(message, history, user_id)

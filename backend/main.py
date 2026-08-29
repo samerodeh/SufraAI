@@ -17,6 +17,7 @@ from db.orders_db import init_orders_db
 from rag import build_index
 # other imports
 import json
+import os
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -25,7 +26,14 @@ async def lifespan(app: FastAPI):
     build_index()
     yield
 
-app = FastAPI(title="Sufra API", lifespan=lifespan)
+app = FastAPI(
+    title="SufraAI API",
+    description="Multi-agent restaurant assistant for Sufra.",
+    version="1.0.0",
+    lifespan=lifespan,
+)
+
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
 
 # Allow requests from the mobile app / any origin during development
 app.add_middleware(
@@ -38,13 +46,13 @@ app.add_middleware(
 # ---------- Routes ----------
 @app.get("/")
 def root():
-    return {"status": "Sufra API is running"}
+    return {"status": "SufraAI API is running"}
 
 
 @app.get("/faq")
 def get_faq():
     """Return all FAQs."""
-    with open("data/faq.json", "r", encoding="utf-8") as f:
+    with open(os.path.join(DATA_DIR, "faq.json"), "r", encoding="utf-8") as f:
         data = json.load(f)
     return data["faqs"]
 

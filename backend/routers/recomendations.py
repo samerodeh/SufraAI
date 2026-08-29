@@ -1,9 +1,8 @@
 # fastapi imports
-from fastapi import APIRouter, HTTPException, status
-from fastapi.responses import StreamingResponse
+from fastapi import APIRouter
 # other imports
 from recomender import get_recommendations, get_popular_items
-import json
+from agents.agent_utilities import get_menu_items
 
 router = APIRouter(prefix="/recommendations", tags=["recommendations"])
 
@@ -13,9 +12,7 @@ def get_recs(user_id: str = "guest", cart_items: str = ""):
     cart = [x.strip() for x in cart_items.split(",") if x.strip()]
     recs = get_recommendations(cart) if cart else get_popular_items()
 
-    with open("data/menu.json", "r", encoding="utf-8") as f:
-        menu = json.load(f)
-    menu_map = {item["id"]: item for item in menu}
+    menu_map = {item["id"]: item for item in get_menu_items()}
 
     return {
         "userId": user_id,

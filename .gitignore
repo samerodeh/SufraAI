@@ -1,17 +1,43 @@
+# ---- Python ----
 venv/
 backend/venv/
-node_modules/
-app/node_modules/
 __pycache__/
 *.pyc
-.env
+*.pyo
+.pytest_cache/
 
-# Databases
+# ---- Secrets ----
+.env
+.env.*
+!.env.example
+app/web/.env.local
+
+# ---- Node / JS ----
+node_modules/
+app/node_modules/
+app/web/node_modules/
+app/mobile/node_modules/
+.expo/
+app/mobile/.expo/
+app/web/.next/
+app/web/out/
+*.tsbuildinfo
+next-env.d.ts
+
+# ---- Databases (recreated on first run) ----
 *.db
+backend/db_files/
 backend/db_scripts/db/
 
-# Chroma vector store
+# ---- Chroma vector store (rebuilt by build_index) ----
 backend/chroma_db/
 
-# Runtime data (regenerated at runtime)
-backend/runtime_store.json
+# ---- Runtime data (regenerated at runtime) ----
+runtime_store.json
+
+# ---- Editor / tooling ----
+.claude/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

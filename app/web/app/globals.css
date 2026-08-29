@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Warm off-white — not pure white, not gray */
+    --background: 32 25% 97%;
+    --foreground: 20 10% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 11%;
+
+    /* Terra cotta — Sufra brand */
+    --primary: 16 57% 41%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 18% 93%;
+    --secondary-foreground: 20 8% 22%;
+
+    --muted: 30 14% 94%;
+    --muted-foreground: 20 6% 50%;
+
+    --accent: 16 35% 91%;
+    --accent-foreground: 16 57% 34%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 28 14% 87%;
+    --input: 28 14% 87%;
+    --ring: 16 57% 41%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 8% 8%;
+    --foreground: 30 12% 94%;
+
+    --card: 20 8% 11%;
+    --card-foreground: 30 12% 94%;
+
+    --popover: 20 8% 11%;
+    --popover-foreground: 30 12% 94%;
+
+    --primary: 16 57% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 20 8% 16%;
+    --secondary-foreground: 30 10% 82%;
+
+    --muted: 20 8% 14%;
+    --muted-foreground: 20 6% 54%;
+
+    --accent: 20 8% 16%;
+    --accent-foreground: 16 57% 66%;
+
+    --destructive: 0 62% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 20 8% 18%;
+    --input: 20 8% 18%;
+    --ring: 16 57% 54%;
+  }
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply border-border box-border;
+  }
+
+  html {
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1, "kern" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold tracking-tight;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/40;
+  }
+
+  /* Focus ring */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
+
+@layer components {
+  /* Page layout wrappers */
+  .page-container {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .content-container {
+    @apply mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section spacing */
+  .section {
+    @apply py-12 sm:py-16;
+  }
+
+  /* Typography scale */
+  .text-display {
+    @apply text-4xl font-semibold tracking-tight sm:text-5xl;
+  }
+
+  .text-headline {
+    @apply text-2xl font-semibold tracking-tight sm:text-3xl;
+  }
+
+  /* Divider */
+  .divider {
+    @apply border-t border-border;
+  }
+
+  /* Skeleton loading */
+  .skeleton {
+    @apply relative overflow-hidden rounded-md bg-muted;
+  }
+
+  .skeleton::after {
+    content: "";
+    @apply absolute inset-0 -translate-x-full;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--background) / 0.5) 50%,
+      transparent 100%
+    );
+    animation: shimmer 1.6s infinite;
+  }
+}
+
+@layer utilities {
+  /* Diet tag color variants */
+  .tag-vegan {
+    @apply bg-green-50 text-green-700 border-green-200;
+  }
+
+  .tag-vegetarian {
+    @apply bg-emerald-50 text-emerald-700 border-emerald-200;
+  }
+
+  .tag-halal {
+    @apply bg-amber-50 text-amber-700 border-amber-200;
+  }
+
+  .tag-gluten-free {
+    @apply bg-yellow-50 text-yellow-700 border-yellow-200;
+  }
+
+  .tag-no-nuts {
+    @apply bg-orange-50 text-orange-700 border-orange-200;
+  }
+
+  .tag-no-dairy {
+    @apply bg-blue-50 text-blue-700 border-blue-200;
+  }
+
+  /* Scrollable row with hidden scrollbar */
+  .scroll-row {
+    @apply flex gap-3 overflow-x-auto pb-1;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scroll-row::-webkit-scrollbar {
+    display: none;
+  }
+}
